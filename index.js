@@ -6,6 +6,7 @@ app.set('view engine', 'ejs');
 
 require('dotenv').config()
 // use res.render to load up an ejs view file
+const PORT = process.env.PORT || 8080;
 
 // index page
 app.get('/', function(req, res) {
@@ -27,5 +28,5 @@ app.get('/about', function(req, res) {
   res.render('pages/about');
 });
 
-app.listen(8080);
+app.listen(PORT);
 console.log('Server is listening on port 8080');
